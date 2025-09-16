@@ -1,0 +1,42 @@
+/*
+ * Style untuk Plugin Judul Halaman Bergantian
+ * Versi: 1.3
+ */
+
+/* Container utama yang membungkus rotator judul */
+#jhb-title-rotator-container {
+    background-color: #f8f9fa;             /* Warna latar belakang lembut */
+    border: 1px solid #dee2e6;             /* Border abu-abu muda yang modern */
+    border-radius: 10px;                   /* Sesuai permintaan */
+    padding: 5px 5px;                    /* Padding (atas/bawah, kiri/kanan) agar lebih lega */
+    min-height: 40px;                      /* Mencegah layout "loncat" saat judul berganti */
+    position: relative;                    /* Konteks posisi untuk elemen di dalamnya */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04); /* Bayangan halus untuk efek kedalaman */
+    overflow: hidden;                      /* Memastikan tidak ada yang keluar dari border-radius */
+    display: flex;                         /* Menggunakan flexbox untuk alignment */
+    align-items: center;                   /* Membuat teks selalu di tengah secara vertikal */
+    justify-content: center;               /* Membuat teks selalu di tengah secara horizontal */
+}
+
+/* * Style untuk tag dinamis (h1, h2, div, dll) yang muncul di dalam container.
+ * Tanda `>` memastikan hanya menarget elemen anak langsung.
+ */
+#jhb-title-rotator-container > * {
+    margin: 0;                             /* Hapus margin default dari tag heading (h1, h2, dll) */
+    padding: 0;                            /* Hapus padding default */
+    text-align: center;                    /* Pastikan teks selalu di tengah */
+    width: 100%;                           /* Ambil lebar penuh container */
+    font-size: 12px;                      /* Sedikit perbesar ukuran font agar mudah dibaca */
+}
+
+/* Style untuk link di dalam judul */
+#jhb-title-rotator-container a {
+    color: inherit;                        /* Warna teks gelap yang kontras */
+    text-decoration: none;                 /* Hapus garis bawah pada link */
+    transition: color 0.2s ease-in-out;    /* Transisi warna yang mulus saat hover */
+}
+
+/* Style saat kursor mouse berada di atas link */
+#jhb-title-rotator-container a:hover {
+    color: #007bff;                        /* Warna biru yang cerah saat hover */
+}
